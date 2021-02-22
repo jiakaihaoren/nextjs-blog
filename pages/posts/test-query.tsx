@@ -3,11 +3,16 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 
-export default class TestQuery extends React.Component {
-  constructor(props){
+interface TestQueryProps{}
+interface TestQueryState{
+  name: string
+}
+
+export default class TestQuery extends React.Component<TestQueryProps, TestQueryState> {
+  constructor(props: TestQueryProps){
     super(props);
     this.state = { 
-      name: ''
+      name : ''
     }
   }
   componentDidMount(){
